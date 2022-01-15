@@ -13,15 +13,26 @@
         font-size:40pt;
     }
     </style>
+    <script type = "text/javascript">
+        window.onload = function() { // 網頁載入時立刻執行
+            var cvs = document.getElementById("cvs");
+            var ctx = cvs.getContext("2d");
+            <!-- ctx.fillRect(500,90,800,60); -->
+            var img = new Image();
+            img.src = "195831.jpg";
+            ctx.drawImage(img,100,50,cvs.width,csv.height);
+        }
+    </script>
     <h1 align = center> 期末報告
         <img src="https://ppt.cc/fY9tFx@.png" alt="My picture" width = "100" height = "100" align = "right" >
     </h1>
+    <canvas id = "cvs" width = "800" height = "500">
+    </canvas>
     <a href = "https://public.tableau.com/views/_16376599020520/6?:language=zh-TW&:retry=yes&publish=yes&:display_count=n&:origin=viz_share_link">
         <p style = "font-size:18pt">
             tableau public
         </p>
     </a> <!-- <a href = "網址">超連結名字</a></li>  -->
-    
     <p style = "font-size:18pt"> 網頁瀏覽次數 :
         <br> <!-- 換行 -->
         <img width = 100 src="https://hitwebcounter.com/counter/counter.php?page=7922826&style=0006&nbdigits=3&type=page&initCount=0" title="Free Counter" Alt="web counter"   border="0" /></a>  
@@ -38,51 +49,63 @@
     <!-- <li> 我是項目的標籤 </li>  項目欄的標籤 -->
         <li>
             <I>
-                各疾病人數
+                台灣民眾對中醫的熱忱不再
             </I>
         </li> 
         
         <li> 
             <I>
-                各鄉鎮之疾病散布
+                探討神經及中醫科的患者女性大於男性原因
             </I>
         </li>
         <li>
             <I>
-                各月份就診人數
+                冬季及換季時患者明顯增加的科別
             </I>
         </li>
         <li>
             <I>
-                各疾病男女數量
+                名間鄉預防保健的人數比例較高之原因
             </I>
         </li>
         <li>
             <I>
-                患者出生年份
+                中高年齡族群易得的疾病以及其併發症
             </I>
         </li>
     </ol>
     <hr>
     <p style = "font-size:24pt">
         <b>
-            I.
+            I. 台灣民眾對中醫的熱忱不再
         </b>
     </p>
-    <p style = "font-size:18pt">
+    <p style = "font-size:18pt;">
         為了更好地了解不同疾病的人數，我們製作了依照顏色區分的長條圖。
         <br>
         並且區隔不同年份的數據，以便比較出不同年份的各種疾病數量的增減。
         <br>
-        其中，我們發現中醫的患者有逐年下降的趨勢。根據衛生福利部統計處資料，臺灣看中醫的人數持續下降，從三十％降至二七％，平均一年減少十二萬人次。
+        其中，我們發現
+            <span style = "color:Orange;">
+                中醫
+            </span>
+        的患者有逐年下降的趨勢。
         <br>
-        其原因可能是民眾對於中醫的了解仍停留在阿嬤時代的刻板印象，認為中醫藥不科學、療效慢，緩不濟急。
+        雖然台灣有著非常良好的教育資源，每年也都培養出了許多中醫人才，也有制度完整的中醫師執照考核。
+        <br>
+        且隨著綜觀整個亞州地區，也鮮少有其他國家能有如此完善的制度。
+        <br>
+        然而，根據衛生福利部統計處資料，臺灣看中醫的人數持續下降，從<b>三十</b>％降至<b>二七</b>％，平均一年減少<b>十二萬</b>人次。
+        <br>
+        其原因可能是年輕的族群對中醫不夠了解，認為中醫不科學、療效慢，緩不濟急。且中醫界也沒有到非常積極的拓展年輕客群。
+        <br>
+        最後造成的結果就是隨著時間推移，中醫逐漸不被大眾所接納。
     </p>
     <div class='tableauPlaceholder' id='viz1641629796776' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='_16416285607250&#47;sheet0' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='zh-TW' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1641629796776');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.45)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
     <hr>
     <p style = "font-size:24pt">
         <b>
-            Ⅱ.
+            Ⅱ. 探討神經及中醫科的患者女性大於男性原因
         </b>
     </p>
     <p style = "font-size:18pt">
@@ -90,17 +113,35 @@
         <br>
         這樣能夠很輕鬆地在相同疾病中，比對出男女間的數量是較高或較低。
         <br>
-        舉例來說，神經科的女性很明顯大於男性。於是我們查詢之後發現女性罹患失智症的比例偏高有三大原因。
+        其中，神經科的
+        <span style = "color:red;">
+            女
+        </span>
+        性很明顯大於
+        <span style = "color:SlateBlue;">
+            男
+        </span>
+        性。於是我們查詢之後發現女性罹患失智症的比例偏高有三大原因。
         <br>
-        第一是女性平均壽命較為長壽，65歲過後，每5歲就會增加一倍的風險；第二是受到女性在停經後缺少雌激素的作用，較容易罹患失智症；第三造成失智的「ApoE4基因」對女性的風險較高。
+        第<b>一</b>是女性平均壽命較為長壽，65歲過後，每5歲就會增加一倍的風險；第<b>二</b>是受到女性在停經後缺少雌激素的作用，較容易罹患失智症；第<b>三</b>造成失智的「ApoE4基因」對女性的風險較高。
         <br>
-        另外，中醫的女性患者數量也大於男性。因為荷爾蒙失調的症狀會在女性身上更加明顯，在這種情況下，許多女性會選擇吃中藥解決。
+        另外，中醫的
+        <span style = "color:red;">
+            女
+        </span>
+        性患者數量也大於
+        <span style = "color:SlateBlue;">
+            男
+        </span>
+        性。因為荷爾蒙失調的症狀會在女性身上更加明顯，比如說會更容易出現一些缺乏食慾、頭暈等等的症狀。
+        <br>
+        另外，當經期不順、進入更年期等等情況下，許多女性也都會選擇吃中藥來調理身體。
     </p>
     <div class='tableauPlaceholder' id='viz1641628455472' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='_16416284465740&#47;sheet0' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='zh-TW' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1641628455472');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.45)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
     <hr>
     <p style = "font-size:24pt">
         <b>
-            Ⅲ.
+            Ⅲ. 冬季及換季時患者明顯增加的科別
         </b>
     </p>
     <p style = "font-size:18pt">
@@ -108,7 +149,15 @@
         <br>
         這樣能夠找出哪一個月份的患者特別多，並再根據線索找出可能會造成這一時期患者特別多的原因。
         <br>
-        其中小兒科在換季及冬季的時候患者明顯較多，就能看出環境突然的變遷是造成的原因之一。
+        其中
+        <span style = "color:ForestGreen;">
+            小兒科、耳鼻喉科
+        </span>
+        及
+        <span style = "color:Crimson;">
+            家醫科
+        </span>
+        在換季及冬季的時候患者明顯較多，就能看出環境突然的變遷是造成的原因之一。
     </p>
     <div class='tableauPlaceholder' id='viz1641630332912' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='_16416302932540&#47;sheet2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='zh-TW' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1641630332912');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.45)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
     <!-- start from 2:40 -->
@@ -116,7 +165,7 @@
     <hr>
     <p style = "font-size:24pt">
         <b>
-            Ⅳ.
+            Ⅳ. 名間鄉預防保健的人數比例較高之原因
         </b>
     </p>
     <p style = "font-size:18pt">
@@ -126,11 +175,13 @@
         <br>
         其中，名間鄉的預防保健的比例明顯還要高出其他鄉鎮許多。
         <br>
-        於是查詢之後發現，在名間鄉的<b>八</b>間診所中，有<b>六</b>間提供了預防保健的服務。
+        於是查詢之後發現，在名間鄉的<b>八</b>間診所中，有<b>六</b>間提供了預防保健的服務，當地的衛生所也常常推廣要做預防保健。
         <br>
         另外，衛福部提供40歲以上未滿65歲的民眾每三年一次、55歲以上原住民以及65歲以上民眾的免費預防保健的服務。
         <br>
-        再加上名間鄉交通不便，年輕人口外流嚴重，當地的居民多是年紀較大居多，所以也造成了預防保健的比例較高的現象。
+        再加上名間鄉交通不便，年輕人口外流嚴重，當地的居民多是年紀較大居多。埔基的官網也提到他們常常會到一些偏鄉提供預防保健的服務。
+        <br>
+        所以這些原因就造成了預防保健的比例較高的現象。
     </p>
     <div class='tableauPlaceholder' id='viz1641630459791' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='_16416304050860&#47;sheet0_1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='zh-TW' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1641630459791');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.45)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>        
 
@@ -142,7 +193,7 @@
     <hr>
     <p style = "font-size:24pt">
         <b>
-            Ⅴ.
+            Ⅴ. 中高年齡族群易得的疾病以及其併發症
         </b>
     </p>
     <p style = "font-size:18pt">
@@ -166,5 +217,5 @@
         <br>
         所以也可以觀察到，西醫慢性病的族群也是非常集中在中高齡的族群。
     </p>
-    <div class='tableauPlaceholder' id='viz1641630551915' style='position: relative'><noscript><a href='#'><img alt=' ' src='8Y&#47;8YXYSG6T6&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;8YXYSG6T6' /> <param name='toolbar' value='yes' /><param name='static_image' value='8Y&#47;8YXYSG6T6&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='zh-TW' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1641630551915');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.45)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    <div class='tableauPlaceholder' id='viz1641895724181' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='_16416305171250&#47;sheet4' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='zh-TW' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1641895724181');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 </html>
