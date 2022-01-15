@@ -13,23 +13,11 @@
         font-size:40pt;
     }
     </style>
-    <script type = "text/javascript">
-        window.onload = function() { // 網頁載入時立刻執行
-            var cvs = document.getElementById("cvs");
-            var ctx = cvs.getContext("2d");
-            <!-- ctx.fillRect(500,90,800,60); -->
-            var img = new Image();
-            img.src = "C:\Users\quanbro\Desktop\Programming\Website\Test\cat.jpg";
-            img.onload = function() { // 圖片載入完成才丟上去
-                ctx.drawImage(this,100,50,cvs.width,csv.height);
-            }
-        }
-    </script>
+    
     <h1 align = center> 期末報告
         <img src="https://ppt.cc/fY9tFx@.png" alt="My picture" width = "100" height = "100" align = "right" >
     </h1>
-    <canvas id = "cvs" width = "800" height = "500">
-    </canvas>
+    
     <a href = "https://public.tableau.com/views/_16376599020520/6?:language=zh-TW&:retry=yes&publish=yes&:display_count=n&:origin=viz_share_link">
         <p style = "font-size:18pt">
             tableau public
@@ -51,33 +39,33 @@
     <!-- <li> 我是項目的標籤 </li>  項目欄的標籤 -->
         <li>
             <I>
-                台灣民眾對中醫的熱忱不再
+                <a href = "#content">台灣民眾對中醫的熱忱不再</a>
             </I>
         </li> 
         
         <li> 
             <I>
-                探討神經及中醫科的患者女性大於男性原因
+                <a href = "#content1">探討神經及中醫科的患者女性大於男性原因</a>
             </I>
         </li>
         <li>
             <I>
-                冬季及換季時患者明顯增加的科別
+                <a href = "#content2">冬季及換季時患者明顯增加的科別</a>
             </I>
         </li>
         <li>
             <I>
-                名間鄉預防保健的人數比例較高之原因
+                <a href = "#content3">名間鄉預防保健的人數比例較高之原因</a>
             </I>
         </li>
         <li>
             <I>
-                中高年齡族群易得的疾病以及其併發症
+                <a href = "#content4">中高年齡族群易得的疾病以及其併發症</a>
             </I>
         </li>
     </ol>
     <hr>
-    <p style = "font-size:24pt">
+    <p id = "content" style = "font-size:24pt">
         <b>
             I. 台灣民眾對中醫的熱忱不再
         </b>
@@ -105,7 +93,7 @@
     </p>
     <div class='tableauPlaceholder' id='viz1641629796776' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='_16416285607250&#47;sheet0' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='zh-TW' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1641629796776');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.45)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
     <hr>
-    <p style = "font-size:24pt">
+    <p id = "content1" style = "font-size:24pt">
         <b>
             Ⅱ. 探討神經及中醫科的患者女性大於男性原因
         </b>
@@ -141,7 +129,7 @@
     </p>
     <div class='tableauPlaceholder' id='viz1641628455472' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='_16416284465740&#47;sheet0' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='zh-TW' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1641628455472');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.45)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
     <hr>
-    <p style = "font-size:24pt">
+    <p id = "content2" style = "font-size:24pt">
         <b>
             Ⅲ. 冬季及換季時患者明顯增加的科別
         </b>
@@ -165,7 +153,7 @@
     <!-- start from 2:40 -->
     <iframe width="560" height="315" src="https://www.youtube.com/embed/u-yiWOoVOzg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <hr>
-    <p style = "font-size:24pt">
+    <p id = "content3" style = "font-size:24pt">
         <b>
             Ⅳ. 名間鄉預防保健的人數比例較高之原因
         </b>
@@ -193,7 +181,7 @@
         <!-- <img src = "https://ppt.cc/fNbpdx@.jpg" width = 720 height = 500/> -->
     </span>
     <hr>
-    <p style = "font-size:24pt">
+    <p id = "content4" style = "font-size:24pt">
         <b>
             Ⅴ. 中高年齡族群易得的疾病以及其併發症
         </b>
