@@ -6,7 +6,6 @@ function Main(d) {
     //alert(n.value);
     // myHeading.textContent = n.value;
     // myHeading.textContent = v.innerHTML;
-    console.log("a");
 }
 function ChangeWeb() {
     var myHeading = document.querySelector('h1');
@@ -14,6 +13,9 @@ function ChangeWeb() {
     if (n.value == "王冠權") {
         window.location.href='https://tommygood.github.io/WebTest1/index.html';
     }
-    else
+    else if (n.value == "tommy") 
+        window.location.href='https://tommygood.github.io/WebTest1/index.html';
+    else {
         myHeading.textContent = "這誰";
+    }
 }
