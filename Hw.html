@@ -7,9 +7,10 @@ HangMannnn
 <script>
 miss = 0
 window.onload = function() {
-    Line({{leng}});
+    Line({{leng}}); // line num
     var text = "";
-    $("0").onsubmit = Add;
+    // if in letter in ans, add and show
+    $("0").onsubmit = Add; 
     $("1").onsubmit = Add1;
     $("2").onsubmit = Add2;
     $("3").onsubmit = Add3;
@@ -35,12 +36,12 @@ window.onload = function() {
     $("23").onsubmit = Add23;
     $("24").onsubmit = Add24;
     $("25").onsubmit = Add25;
-    SetBt();
-    SetAns();
+    SetBt(); // bt pos
+    SetAns(); 
     //$("bt0").addEventListener("click",MakeMis,false);
 }
 
-function MakeMis() {
+function MakeMis() { // wrong letter
     var ans_num = 0; // count the current ans num
     for (var i = 0;i < {{leng}};i++) {
         var ans_pos = "ans" + i
@@ -51,7 +52,7 @@ function MakeMis() {
         alert("you win !!!");
         return true; // reload
     }
-    if (miss == 1) 
+    if (miss == 1) // draw the hangman
         First();
     if (miss == 2) 
         Sec();
