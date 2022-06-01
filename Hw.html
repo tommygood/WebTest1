@@ -1,0 +1,1043 @@
+<html>
+<head>
+<title>
+HangMannnn
+</title>
+</head>
+<script>
+miss = 0
+window.onload = function() {
+    Line({{leng}});
+    var text = "";
+    $("0").onsubmit = Add;
+    $("1").onsubmit = Add1;
+    $("2").onsubmit = Add2;
+    $("3").onsubmit = Add3;
+    $("4").onsubmit = Add4;
+    $("5").onsubmit = Add5;
+    $("6").onsubmit = Add6;
+    $("7").onsubmit = Add7;
+    $("8").onsubmit = Add8;
+    $("9").onsubmit = Add9;
+    $("10").onsubmit = Add10;
+    $("11").onsubmit = Add11;
+    $("12").onsubmit = Add12;
+    $("13").onsubmit = Add13;
+    $("14").onsubmit = Add14;
+    $("15").onsubmit = Add15;
+    $("16").onsubmit = Add16;
+    $("17").onsubmit = Add17;
+    $("18").onsubmit = Add18;
+    $("19").onsubmit = Add19;
+    $("20").onsubmit = Add20;
+    $("21").onsubmit = Add21;
+    $("22").onsubmit = Add22;
+    $("23").onsubmit = Add23;
+    $("24").onsubmit = Add24;
+    $("25").onsubmit = Add25;
+    SetBt();
+    SetAns();
+    //$("bt0").addEventListener("click",MakeMis,false);
+}
+
+function MakeMis() {
+    var ans_num = 0; // count the current ans num
+    for (var i = 0;i < {{leng}};i++) {
+        var ans_pos = "ans" + i
+        if ($(ans_pos).innerHTML != "") // an ans
+            ans_num += 1;
+    }
+    if (ans_num == {{leng}}) {
+        alert("you win !!!");
+        return true; // reload
+    }
+    if (miss == 1) 
+        First();
+    if (miss == 2) 
+        Sec();
+    if (miss == 3)
+        Third();
+    if (miss == 4)
+        Four();
+    if (miss == 5)
+        Fifth();
+    if (miss == 6)
+        Sixth();
+    if (miss == 7)
+        Seven();
+    if (miss == 8)
+        Eight();
+    if (miss == 9) { // loss
+        Nine();
+        alert("you loss haha, answer is '{{ans}}'");
+        return true; // reload
+    }
+    return false;
+} 
+
+function SetAns() {  // set ans pos
+    for (var i = 0;i < 7;i++) {
+        var pos = "ans" + i;
+        $(pos).style.position = "absolute";
+        var pos_num = (225+i*150); // each 30px gap
+        $(pos).style.top = "400" + "px";
+        $(pos).style.left = pos_num + "px";
+    }
+}
+
+function SetBt() {  // set bt pos
+    for (var i = 0;i < 13;i++) { // first column
+        var pos = "bt" + i;
+        $(pos).style.position = "absolute";
+        var pos_num = (50+i*70); // each 30px gap
+        $(pos).style.top = pos_num + "px";
+        $(pos).style.left = "1570px";
+    }
+    for (var i = 13;i < 26;i++) { // sec column
+        var pos = "bt" + i;
+        $(pos).style.position = "absolute";
+        var pos_num = (50+(i-13)*70); // each 30px gap
+        $(pos).style.top = pos_num + "px";
+        $(pos).style.left = "1720px";
+    }
+}
+
+function Add() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("a" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "a"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false;
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add1() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("b" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "b"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false;
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add2() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("c" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "c"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false;
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add3() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("d" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "d"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false;
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add4() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("e" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "e"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false;
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add5() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("f" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "f"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false;
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add6() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("g" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "g"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false;
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add7() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("h" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "h"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false;
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add8() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("i" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "i"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false;
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add9() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("j" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "j"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false;
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add10() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("k" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "k"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false;
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add11() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("l" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "l"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false;
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add12() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("m" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "m"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false;
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add13() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("n" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "n"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false;
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add14() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("o" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "o"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false;
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add15() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("p" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "p"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false;
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add16() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("q" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "q"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false;
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add17() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("r" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "r"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false;
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add18() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("s" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "s"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false;
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add19() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("t" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "t"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false;
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add20() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("u" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "u"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false;
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add21() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("v" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "v"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false;
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add22() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("w" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "w"; 
+            return false;
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add23() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("x" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "x"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false;
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add24() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("y" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "y"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false;
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function Add25() { // if in letter in ans, add and show
+    var ans_pos;
+    for (var i = 0;i < "{{ans}}".length;i++) {
+        ans_pos = "ans" + i; // pos of ans
+        if (("z" == "{{ans}}"[i]) && ($(ans_pos).innerHTML == "")) { // not used
+            $(ans_pos).innerHTML = "z"; 
+            var ans_num = 0; // count the current ans num
+            for (var i = 0;i < {{leng}};i++) {
+                var ans_pos = "ans" + i
+                if ($(ans_pos).innerHTML != "") // an ans
+                    ans_num += 1;
+            }
+            if (ans_num == {{leng}}) {
+                setTimeout(alert("you win ! answer is '{{ans}}'"),3000000);
+                return true; // reload
+            }
+            return false; 
+        }
+    }
+    miss += 1;
+    return MakeMis();
+}
+
+function $(id) {
+    return document.getElementById(id);
+}
+
+function Line(leng) {
+    let canvas = document.getElementById("line");
+    let ctx = canvas.getContext("2d");
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    ctx.lineWidth = 10;
+    for (var i = 0;i < leng;i++) {
+        ctx.beginPath();
+        ctx.moveTo(660+i*150,500);
+        ctx.lineTo(760+i*150,500);
+        ctx.stroke();
+    }
+}
+    
+
+function Nine() {
+    let canvas = document.getElementById("nine");
+    let ctx = canvas.getContext("2d");
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    ctx.lineWidth = 10;
+    ctx.beginPath();
+    ctx.moveTo(360,450);
+    ctx.lineTo(460,500);
+    ctx.stroke();
+}
+
+function Eight() {
+    let canvas = document.getElementById("eight");
+    let ctx = canvas.getContext("2d");
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    ctx.lineWidth = 10;
+    ctx.beginPath();
+    ctx.moveTo(360,450);
+    ctx.lineTo(260,500);
+    ctx.stroke();
+}
+
+function Seven() {
+    let canvas = document.getElementById("seven");
+    let ctx = canvas.getContext("2d");
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    ctx.lineWidth = 10;
+    ctx.beginPath();
+    ctx.moveTo(360,300);
+    ctx.lineTo(460,350);
+    ctx.stroke();
+}
+
+function Sixth() {
+    let canvas = document.getElementById("sixth");
+    let ctx = canvas.getContext("2d");
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    ctx.lineWidth = 10;
+    ctx.beginPath();
+    ctx.moveTo(360,300);
+    ctx.lineTo(260,350);
+    ctx.stroke();
+} 
+
+function Fifth() {
+    let canvas = document.getElementById("fifth");
+    let ctx = canvas.getContext("2d");
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    ctx.lineWidth = 10;
+    ctx.beginPath();
+    ctx.moveTo(360,250);
+    ctx.lineTo(360,450);
+    ctx.stroke();
+}
+
+function Four() {
+    let canvas = document.getElementById("four");
+    let ctx = canvas.getContext("2d");
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    ctx.lineWidth = 10;
+    ctx.arc(360,200,50,0,Math.PI*2);
+    ctx.fill();
+    ctx.stroke();
+}
+
+function Third() {
+    let canvas = document.getElementById("third");
+    let ctx = canvas.getContext("2d");
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    ctx.lineWidth = 10;
+    ctx.strokeStyle = "#0000FF";
+    ctx.beginPath();
+    ctx.moveTo(360,50);
+    ctx.lineTo(360,150);
+    ctx.stroke();
+}   
+
+function Sec() {
+    let sec = document.getElementById("sec");
+    let ctx = sec.getContext("2d");
+    sec.height = window.innerHeight;
+    sec.width = window.innerWidth;
+    ctx.lineWidth = 30;
+    ctx.beginPath();
+    ctx.moveTo(135,50);
+    ctx.lineTo(380,50);
+    ctx.stroke();
+}
+
+function First() {
+    let first = document.getElementById("first");
+    let ctx = first.getContext("2d");
+    first.height = window.innerHeight;
+    first.width = window.innerWidth;
+    ctx.lineWidth = 30;
+    ctx.beginPath();
+    ctx.moveTo(150,50);
+    ctx.lineTo(150,550);
+    ctx.stroke();
+}
+</script>
+<style>
+.paint {
+    position : absolute;
+}
+
+.bt {
+    position : absolute;
+    width : 100px;
+    height : 50px;
+}
+
+.ans0 {
+    poistion : absolute;
+    font-size : 50px;
+    margin :100px 500px;
+}
+.ans1 {
+    poistion : absolute;
+    font-size : 50px;
+    margin :100px 500px;
+}
+.ans2 {
+    poistion : absolute;
+    font-size : 50px;
+    margin :100px 500px;
+}
+.ans3 {
+    poistion : absolute;
+    font-size : 50px;
+    margin :100px 500px;
+}
+.ans4 {
+    poistion : absolute;
+    font-size : 50px;
+    margin :100px 500px;
+}
+.ans5 {
+    poistion : absolute;
+    font-size : 50px;
+    margin :100px 500px;
+}
+.ans6 {
+    poistion : absolute;
+    font-size : 50px;
+    margin :100px 500px;
+}
+</style>
+<h1>
+HangMannnn
+</h1>
+<canvas id ="first" class = "paint">
+</canvas>
+<canvas id = "sec" class = "paint">
+</canvas>
+<canvas id = "third" class = "paint">
+</canvas>
+<canvas id = "four" class = "paint">
+</canvas>
+<canvas id = "fifth" class = "paint">
+</canvas>
+<canvas id = "sixth" class = "paint">
+</canvas>
+<canvas id = "seven" class = "paint">
+</canvas>
+<canvas id = "eight" class = "paint">
+</canvas>
+<canvas id = "nine" class = "paint">
+</canvas>
+<div id = "ans0" class = "ans0"></div>
+<div id = "ans1" class = "ans1"></div>
+<div id = "ans2" class = "ans2"></div>
+<div id = "ans3" class = "ans3"></div>
+<div id = "ans4" class = "ans4"></div>
+<div id = "ans5" class = "ans5"></div>
+<div id = "ans6" class = "ans6"></div>
+<canvas id = "line" class = "paint">
+</canvas>
+<form id = "0" method = "post">
+{% csrf_token %}
+<input type = "submit" id = "bt0" name = "a" value = "a" class = "bt">
+</input>
+</form>
+<form id = "1" method = "post">
+{% csrf_token %}
+<input type = "submit" name = "b" id = "bt1" value = "b" class = "bt">
+</input>
+</form>
+<form id = "2" method = "post">
+{% csrf_token %}
+<input type = "submit" name = "c" id = "bt2" value = "c" class = "bt">
+</input>
+</form>
+<form id = "3" method = "post">
+{% csrf_token %}
+<input type = "submit" name = "d" id = "bt3" value = "d" class = "bt">
+</input>
+</form>
+<form id = "4" method = "post">
+{% csrf_token %}
+<input type = "submit" name = "e" id = "bt4" value = "e" class = "bt">
+</input>
+</form>
+<form id = "5" method = "post">
+{% csrf_token %}
+<input type = "submit" name = "f" id = "bt5" value = "f" class = "bt">
+</input>
+</form>
+<form id = "6" method = "post">
+{% csrf_token %}
+<input type = "submit" name = "g" id = "bt6" value = "g" class = "bt">
+</input>
+</form>
+<form id = "7" method = "post">
+{% csrf_token %}
+<input type = "submit" name = "h" id = "bt7" value = "h" class = "bt">
+</input>
+</form>
+<form id = "8" method = "post">
+{% csrf_token %}
+<input type = "submit" name = "i" id = "bt8" value = "i" class = "bt">
+</input>
+</form>
+<form id = "9" method = "post">
+{% csrf_token %}
+<input type = "submit" name = "j" id = "bt9" value = "j" class = "bt">
+</input>
+</form>
+<form id = "10" method = "post">
+{% csrf_token %}
+<input type = "submit" name = "k" id = "bt10" value = "k" class = "bt">
+</input>
+</form>
+<form id = "11" method = "post">
+{% csrf_token %}
+<input type = "submit" name = "l" id = "bt11" value = "l" class = "bt">
+</input>
+</form>
+<form id = "12" method = "post">
+{% csrf_token %}
+<input type = "submit" name = "m" id = "bt12" value = "m" class = "bt">
+</input>
+</form>
+<form id = "13" method = "post">
+{% csrf_token %}
+<input type = "submit" name = "n" id = "bt13" value = "n" class = "bt">
+</input>
+</form>
+<form id = "14" method = "post">
+{% csrf_token %}
+<input type = "submit" name = "o" id = "bt14" value = "o" class = "bt">
+</input>
+</form>
+<form id = "15" method = "post">
+{% csrf_token %}
+<input type = "submit" name = "p" id = "bt15" value = "p" class = "bt">
+</input>
+</form>
+<form id = "16" method = "post">
+{% csrf_token %}
+<input type = "submit" name = "q" id = "bt16" value = "q" class = "bt">
+</input>
+</form>
+<form id = "17" method = "post">
+{% csrf_token %}
+<input type = "submit" name = "r" id = "bt17" value = "r" class = "bt">
+</input>
+</form>
+<form id = "18" method = "post">
+{% csrf_token %}
+<input type = "submit" name = "s" id = "bt18" value = "s" class = "bt">
+</input>
+</form>
+<form id = "19" method = "post">
+{% csrf_token %}
+<input type = "submit" name = "t" id = "bt19" value = "t" class = "bt">
+</input>
+</form>
+<form id = "20"  method = "post">
+{% csrf_token %}
+<input type = "submit" name = "u" id = "bt20" value = "u" class = "bt">
+</input>
+</form>
+<form id = "21" method = "post">
+{% csrf_token %}
+<input type = "submit" name = "v" id = "bt21" value = "v" class = "bt">
+</input>
+</form>
+<form id = "22" method = "post">
+{% csrf_token %}
+<input type = "submit" name = "w" id = "bt22" value = "w" class = "bt">
+</input>
+</form>
+<form id = "23" method = "post">
+{% csrf_token %}
+<input type = "submit" name = "x" id = "bt23" value = "x" class = "bt">
+</input>
+</form>
+<form id = "24" method = "post">
+{% csrf_token %}
+<input type = "submit" name = "y" id = "bt24" value = "y" class = "bt">
+</input>
+</form>
+<form id = "25" method = "post">
+{% csrf_token %}
+<input type = "submit" name = "z" id = "bt25" value = "z" class = "bt">
+</input>
+</form>
+<form id = "insert" method = "post">
+{% csrf_token %}
+{{ form.eng_ans }}
+<input type = "submit" name = "insert_text" value = "add new answer" style = "position:relative;">
+</input>
+</form>
+</html>
