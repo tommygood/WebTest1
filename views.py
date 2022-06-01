@@ -365,15 +365,15 @@ def ChPassward(request) : # 更改密碼
 def Port(request) :
     return HttpResponse("188")
 
-def Hw(request) :
+def Hw(request) : # hangman
     cursor = connection.cursor()
     cursor.execute("select * from ConnectSql_hwdata;")
     record = cursor.fetchall()
     form = HwForm(request.POST or None)
     num = randint(0,len(record)-1)
     context = {"leng" : len(str(record[num][1])), "ans" : record[num][1], "form" :form}
-    if "insert_text" in request.POST : 
-        if form.is_valid(): # 繳交新增的帳密
+    if "insert_text" in request.POST : # insert new ans
+        if form.is_valid(): 
             sql = "insert into ConnectSql_hwdata(eng_ans) values(%s);"
             cursor.execute(sql, (form.cleaned_data["eng_ans"],))
             return render(request, "Hw.html", context)
